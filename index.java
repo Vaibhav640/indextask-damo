@@ -1,35 +1,24 @@
- class Calculator{
-   public Calculator(){
+public class Droid{
+  int batteryLevel;
+  String name;
+  public Droid(String droidName){
+        name=droidName;
+        batteryLevel=100;
+  }
+  public String toString(){
+    return "Hello, I’m the droid: " + name;
+  }
+  public void performTask(String task) {
+    batteryLevel=  batteryLevel - 10;
+    System.out.println(name + " is performing task: " +task);
 
-   }
-   public int add(int a,int b){
-    int result=a+b;
-    return result;
-   }
-   public int subtract(int a,int b){
-    int result=a-b;
-    return result;
-   }
-   public int multiply(int a,int b){
-    int result=a*b;
-    return result;
-   }
-    public int divide(int a,int b){
-    int result =a/b;
-    return result;
-   }
-   public int modulo(int a,int b){
-    int result = a % b ;
-    return result;
-   }
+  }
+
 public static void main(String[] args){
-  Calculator myCalculator = new Calculator();
-    System.out.println(myCalculator.add(5, 7));
-    System.out.println(myCalculator.subtract(5, 7));
-    System.out.println(myCalculator.multiply(5, 7));
-    System.out.println(myCalculator.divide(5, 7));
-    System.out.println(myCalculator.modulo(5, 7));
+   Droid Codey = new Droid("Codey");
+    System.out.println(Codey);
+    Codey.performTask("dancing");
+    Codey.performTask("coding");
 
 }
-
 }
